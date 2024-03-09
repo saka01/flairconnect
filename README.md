@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+HutsyConnect
+============
 
-## Getting Started
+HutsyConnect is a web application designed to allow registered users to sign up for and create events. This platform is built using Next.js and is designed to offer a sleek, user-friendly interface for managing and participating in events.
 
-First, run the development server:
+Getting Started
+---------------
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+First, clone the repository to your local machine:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```git clone <repository-url>```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Navigate into the project directory:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+`cd HutsyConnect`
 
-To learn more about Next.js, take a look at the following resources:
+Before running the development server, install the necessary dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`npm install`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To start the development server, run:
 
-## Deploy on Vercel
+`npm run dev`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000/) in your browser to view the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Project Structure
+-----------------
+
+The project is structured as follows:
+
+-   `pages/`: Contains all the page components of the application, such as Home, Login, Event List, etc.
+-   `components/`: Houses reusable UI components like buttons, input fields, etc.
+-   `styles/`: Contains CSS/SCSS files for styling the application.
+-   `public/`: Stores static files like images, fonts, etc.
+-   `utils/`: Includes utility functions and helpers used across the application.
+-   `api/`: Consists of functions to interact with backend services.
+
+Features
+--------
+
+-   Login and Authorization: Secure login mechanism and session management.
+-   Event List: View all, past, and future events. Join or leave events with a click.
+-   Create Event: A form to create new events.
+-   404 Page: Custom 404 page for non-existent routes.
+
+Technologies
+------------
+
+This project is created with:
+
+-   Next.js
+-   React
+-   Axios for API requests
+-   Other notable libraries: react-hook-form for forms, date-fns for date handling
+
+Deployment
+----------
+
+The application is deployed on Vercel. Follow the steps below to deploy your own instance:
+
+1.  Sign up/log in to Vercel ([https://vercel.com](https://vercel.com/)).
+2.  Connect your GitHub account and select the HutsyConnect repository.
+3.  Configure the project settings if necessary and deploy.
+
+Contributing
+------------
+
+To contribute to HutsyConnect, follow these steps:
+
+1.  Fork this repository.
+2.  Create a new branch (`git checkout -b feature/YourFeatureName`).
+3.  Make changes and commit (`git commit -am 'Add some feature'`).
+4.  Push to the branch (`git push origin feature/YourFeatureName`).
+5.  Create a new Pull Request.
+
+Feedback
+--------
+
+If you have any feedback or suggestions, please open an issue in the repository or contact us directly.
