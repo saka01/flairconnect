@@ -1,3 +1,4 @@
+import DashboardLayout from "./layout";
 export default function Dashboard() {
   return (
     <section>
@@ -5,3 +6,7 @@ export default function Dashboard() {
     </section>
   );
 }
+
+Dashboard.getLayout = function getLayout(page) {
+  return <DashboardLayout>{page}</DashboardLayout>;
+};
