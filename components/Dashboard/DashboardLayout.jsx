@@ -1,7 +1,6 @@
 import DashboardPrimaryNav from "../../components/Nav/DashboardPrimaryNav";
 import styles from "../../styles/dashboardmenu.module.css";
 
-
 export default function DashboardLayout({ children }) {
   return (
     <div className={styles.dashboardlayout}>
@@ -9,5 +8,4 @@ export default function DashboardLayout({ children }) {
       <main>{children}</main>
     </div>
   );
-};
-
+}
