@@ -13,7 +13,7 @@ const SideBanner = () => {
           src="/images/hutsylogo.png"
           alt="Hutsy Side banner"
           width={40}
-          height={1024}
+          height={40}
         />
       </div>
     </div>
