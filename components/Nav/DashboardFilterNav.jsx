@@ -6,13 +6,13 @@ import { MdViewModule, MdViewAgenda } from "react-icons/md";
 
 const DashboardFilterNav = () => {
   return (
-    <div className={styles.dashboardfilernav}>
+    <div className={styles.dashboardfilternav}>
       <div>
         <span>ALL EVENTS</span>
         <span>FUTURE EVENTS</span>
         <span>PAST EVENTS</span>
       </div>
-      <div className={styles.viewswitcher}>
+      <div className={styles.dashboardviewswitcher}>
         <MdViewModule />
         <MdViewAgenda />
       </div>

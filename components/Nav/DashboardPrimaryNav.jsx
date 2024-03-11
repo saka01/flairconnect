@@ -5,10 +5,10 @@ import styles from "../../styles/dashboardmenu.module.css";
 
 const DashboardPrimaryNav = () => {
   return (
-    <div className={styles.sidebanner}>
+    <div className={styles.dashboardprimarynav}>
       <Logo />
-      <div className={styles.lowerbanner}>
-        <span>GIVE YOURSELF SOME CREDIT</span>
+      <div className={styles.profilesettings}>
+        <span>Tom Watts</span>
         <Image
           src="/images/hutsylogo.png"
           alt="Hutsy Side banner"

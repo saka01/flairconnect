@@ -1,0 +1,37 @@
+.dashboardlayout{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+
+}
+
+.dashboardmain{
+    padding: 5em;
+}
+.dashboardprimarynav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profilesettings{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.dashboardfilternav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dashboardviewswitcher{
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 500px) {
+
+    
+
+}

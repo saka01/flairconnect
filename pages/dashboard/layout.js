@@ -1,12 +1,11 @@
-import React from "react";
 import DashboardPrimaryNav from "../../components/Nav/DashboardPrimaryNav";
-import DashboardFilterNav from "../../components/Nav/DashboardFilterNav";
+import styles from "../../styles/dashboardmenu.module.css";
+
 
 export default function DashboardLayout({ children }) {
   return (
-    <div>
+    <div className={styles.dashboardlayout}>
       <DashboardPrimaryNav />
-      <DashboardFilterNav />
       <main>{children}</main>
     </div>
   );
