@@ -57,6 +57,8 @@
   width: 29em;
   /* width: 390px; */
   height: 296px;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1087);
+;
 }
 
 .listview {
