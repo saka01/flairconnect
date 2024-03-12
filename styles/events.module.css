@@ -31,6 +31,14 @@
 .eventfilter button.active {
   color: #111936;
 }
+.normalIcon{
+    color: #A9AEB4;
+    width: 24px;
+    height: 24px;
+}
+.activeIcon {
+  color: #111936;
+}
 
 .boxview {
   display: flex;

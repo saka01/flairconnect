@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import EventsCard from "./EventCard";
 import styles from "../../styles/events.module.css";
-import { MdViewModule, MdViewAgenda } from "react-icons/md";
+import { MdViewModule, MdViewStream } from "react-icons/md";
 
 const mockEvents = [
   {
@@ -154,10 +154,18 @@ const Events = () => {
         </div>
         <div className={styles.eventviewswitcher}>
           <button onClick={() => setViewMode("box")}>
-            <MdViewModule />
+            <MdViewModule
+              className={`${
+                viewMode === "box" ? styles.activeIcon : styles.viewIcon
+              } ${styles.normalIcon}`}
+            />
           </button>
           <button onClick={() => setViewMode("list")}>
-            <MdViewAgenda />
+            <MdViewStream
+              className={`
+                ${viewMode === "list" ? styles.activeIcon : styles.viewIcon}
+                ${styles.normalIcon}`}
+            />
           </button>
         </div>
       </div>
