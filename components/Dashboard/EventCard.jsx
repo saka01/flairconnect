@@ -21,35 +21,42 @@ const EventsCard = ({ event, viewMode }) => {
       {viewMode === "list" ? (
         // Render as list item
         <div className={styles.listeventdetails}>
-          <p>{event.title}</p>
-          <p>{event.description}</p>
-          <p>{event.host}</p>
-          <p>
-            {event.date} - {event.time}
-          </p>
-          <p>
-            {event.attendees} of {event.maxCapacity}
-          </p>
+          <div className={styles.listeventinformation}>
+            <p className={styles.listeventtitle}>{event.title}</p>
+            <p className={styles.listeventdescription}>
+              {event.description.length > 20
+                ? `${event.description.substring(0, 10)}...`
+                : event.description}
+            </p>
+
+            <p className={styles.listeventhost}>{event.host}</p>
+            <p className={styles.listeventschedule}>
+              {event.date} - {event.time}
+            </p>
+            <p className={styles.listeventattendees}>
+              {event.attendees} of {event.maxCapacity}
+            </p>
+          </div>
           <EventCustomButton>JOIN</EventCustomButton>
         </div>
       ) : (
         // Render as box
         <div className={styles.boxeventdetails}>
-          <div className={styles.eventschedule}>
+          <div className={styles.boxeventschedule}>
             {event.date} - {event.time}
           </div>
           <br />
 
-          <div className={styles.eventheader}>
-            <span className={styles.eventtitle}>{event.title}</span>
-            <span className={styles.eventhost}>{event.host}</span>
+          <div className={styles.boxeventheader}>
+            <span className={styles.boxeventtitle}>{event.title}</span>
+            <span className={styles.boxeventhost}>{event.host}</span>
           </div>
           <br />
-          <div className={styles.eventdescription}>{event.description}</div>
+          <div className={styles.boxeventdescription}>{event.description}</div>
           <br />
 
-          <div className={styles.eventfooter}>
-            <div className={styles.eventattendees}>
+          <div className={styles.boxeventfooter}>
+            <div className={styles.boxeventattendees}>
               <FaUserLarge /> {event.attendees} of {event.maxCapacity}
             </div>
             <EventCustomButton>JOIN</EventCustomButton>

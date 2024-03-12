@@ -155,16 +155,17 @@ const Events = () => {
         <div className={styles.eventviewswitcher}>
           <button onClick={() => setViewMode("box")}>
             <MdViewModule
-              className={`${
-                viewMode === "box" ? styles.activeIcon : styles.viewIcon
-              } ${styles.normalIcon}`}
+              className={
+                viewMode === "box" ? styles.activeIcon : styles.normalIcon
+              }
+              style={{ marginRight: "0.5em" }}
             />
           </button>
           <button onClick={() => setViewMode("list")}>
             <MdViewStream
-              className={`
-                ${viewMode === "list" ? styles.activeIcon : styles.viewIcon}
-                ${styles.normalIcon}`}
+              className={
+                viewMode === "list" ? styles.activeIcon : styles.normalIcon
+              }
             />
           </button>
         </div>

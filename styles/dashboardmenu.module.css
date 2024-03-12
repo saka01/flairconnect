@@ -17,6 +17,16 @@
 .profilesettings{
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+gap: 0.5em;
+
+}
+.profilesettings span{
+font-size: 14px;
+font-weight: 500;
+line-height: 24px;
+color: #949EA8;
+
 }
 
 .dashboardfilternav{
