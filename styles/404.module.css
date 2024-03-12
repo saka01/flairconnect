@@ -1,0 +1,26 @@
+.errorpage{
+    display: flex;
+    flex-direction: column;
+font-size: 28px;
+font-weight: 400;
+line-height: 48px;
+color: #111936;
+text-align: left;
+}
+
+.errorpage span{
+font-size: 18px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+color: #949EA8;
+}
+
+.darthvader{
+    position: absolute;
+width: 646px;
+height: 633px;
+top: 296px;
+left: 241px;
+
+}

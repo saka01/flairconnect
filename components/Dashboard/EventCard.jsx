@@ -1,7 +1,8 @@
 // EventsCard.js
 import React from "react";
 import styles from "../../styles/events.module.css";
-import { RiUser3Fill } from "react-icons/ri";
+import { FaUserLarge } from "react-icons/fa6";
+import EventCustomButton from "../Buttons/EventsButton";
 
 // {
 //     id: 1,
@@ -20,22 +21,39 @@ const EventsCard = ({ event, viewMode }) => {
       {viewMode === "list" ? (
         // Render as list item
         <div className={styles.listeventdetails}>
-          {event.title} - {event.description} - {event.host}
+          <p>{event.title}</p>
+          <p>{event.description}</p>
+          <p>{event.host}</p>
+          <p>
+            {event.date} - {event.time}
+          </p>
+          <p>
+            {event.attendees} of {event.maxCapacity}
+          </p>
+          <EventCustomButton>JOIN</EventCustomButton>
         </div>
       ) : (
         // Render as box
         <div className={styles.boxeventdetails}>
-          <div>
+          <div className={styles.eventschedule}>
             {event.date} - {event.time}
           </div>
-          <div>
-            {event.title} <br /> {event.host}
+          <br />
+
+          <div className={styles.eventheader}>
+            <span className={styles.eventtitle}>{event.title}</span>
+            <span className={styles.eventhost}>{event.host}</span>
           </div>
-          <div>{event.description}</div>
-          <div>
-            <RiUser3Fill /> {event.attendees} of {event.maxCapacity}
+          <br />
+          <div className={styles.eventdescription}>{event.description}</div>
+          <br />
+
+          <div className={styles.eventfooter}>
+            <div className={styles.eventattendees}>
+              <FaUserLarge /> {event.attendees} of {event.maxCapacity}
+            </div>
+            <EventCustomButton>JOIN</EventCustomButton>
           </div>
-          <button>JOIN</button>
         </div>
       )}
     </>

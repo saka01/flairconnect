@@ -30,8 +30,21 @@
 .sidebannercontent {
   flex-grow: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  height: 100vh;
+}
+
+.topbanner {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 2em;
+color: gray;
+font-size: 14px;
+font-weight: 500;
+line-height: 24px;
+gap: 0.25em;
 }
 
 @media screen and (max-width: 500px) {

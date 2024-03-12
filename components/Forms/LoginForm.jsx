@@ -13,9 +13,6 @@ const LoginForm = () => {
 
   return (
     <div className={styles.loginform}>
-      <span>
-        Don&apos;t have account? <strong>Sign Up</strong>
-      </span>
       <h2>Sign In to HutsyConnect.</h2>
       {error ? (
         <span>Error: {error}</span>
