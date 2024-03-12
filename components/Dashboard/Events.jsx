@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import EventsCard from "./EventCard";
-import styles from "../../styles/dashboardmenu.module.css";
+import styles from "../../styles/events.module.css";
 import { MdViewModule, MdViewAgenda } from "react-icons/md";
 
 const mockEvents = [
@@ -130,38 +130,40 @@ const Events = () => {
   const [viewMode, setViewMode] = useState("box");
 
   return (
-    <div>
-      <div className={styles.dashboardfilternav}>
-        <div>
+    <div className={styles.eventcontainer}>
+      <div className={styles.eventnav}>
+        <div className={styles.eventfilter}>
           <button
             onClick={() => setActiveTab("allEvents")}
-            className={activeTab === "all" ? "active" : ""}
+            className={activeTab === "allEvents" ? styles.active : ""}
           >
             ALL EVENTS
           </button>
           <button
             onClick={() => setActiveTab("futureEvents")}
-            className={activeTab === "future" ? "active" : ""}
+            className={activeTab === "futureEvents" ? styles.active : ""}
           >
             FUTURE EVENTS
           </button>
           <button
             onClick={() => setActiveTab("pastEvents")}
-            className={activeTab === "past" ? "active" : ""}
+            className={activeTab === "pastEvents" ? styles.active : ""}
           >
             PAST EVENTS
           </button>
         </div>
-        <div className={styles.dashboardviewswitcher}>
-          <button onClick={() => setViewMode("list")}>
+        <div className={styles.eventviewswitcher}>
+          <button onClick={() => setViewMode("box")}>
             <MdViewModule />
           </button>
-          <button onClick={() => setViewMode("box")}>
+          <button onClick={() => setViewMode("list")}>
             <MdViewAgenda />
           </button>
         </div>
       </div>
-      <section>
+      <section
+        className={viewMode === "box" ? styles.boxview : styles.listview}
+      >
         {mockEvents
           .filter((event) => {
             const now = new Date();

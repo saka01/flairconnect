@@ -14,7 +14,7 @@ import { RiUser3Fill } from "react-icons/ri";
 //     maxCapacity: 200
 //   },
 
-const EventsCard = ({ event, viewMode }) => {
+const EventsNav = ({ event, viewMode }) => {
   return (
     <>
       {viewMode === "list" ? (
