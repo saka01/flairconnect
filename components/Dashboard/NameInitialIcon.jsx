@@ -9,11 +9,7 @@ const initials2 = name
   .map((word) => word[0].toUpperCase())
   .join("");
 
-  return (
-    <div className={styles.initialiconcontainer}>
-        {initials}
-    </div>
-  );
+  return <div className={styles.initialiconcontainer}>{initials}</div>;
 };
 
 export default NameInitialIcon;

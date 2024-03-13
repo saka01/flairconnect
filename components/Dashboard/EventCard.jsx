@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "../../styles/events.module.css";
 import { FaUserLarge } from "react-icons/fa6";
-import EventCustomButton from "../Buttons/EventsButton";
+import CustomButton from "../Buttons/CustomButton";
 
 // {
 //     id: 1,
@@ -37,7 +37,7 @@ const EventsCard = ({ event, viewMode }) => {
               {event.attendees} of {event.maxCapacity}
             </p>
           </div>
-          <EventCustomButton>JOIN</EventCustomButton>
+          <CustomButton>JOIN</CustomButton>
         </div>
       ) : (
         // Render as box
@@ -59,7 +59,7 @@ const EventsCard = ({ event, viewMode }) => {
             <div className={styles.boxeventattendees}>
               <FaUserLarge /> {event.attendees} of {event.maxCapacity}
             </div>
-            <EventCustomButton>JOIN</EventCustomButton>
+            <CustomButton>JOIN</CustomButton>
           </div>
         </div>
       )}

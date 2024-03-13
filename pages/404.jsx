@@ -1,4 +1,4 @@
-import EventCustomButton from "../components/Buttons/EventsButton";
+import CustomButton from "../components/Buttons/CustomButton";
 import SideBannerLayout from "../components/SideBanner/SideBannerLayout";
 import styles from "../styles/404.module.css";
 import Image from "next/image";
@@ -22,7 +22,7 @@ export default function PageNotFound() {
           Please press the refresh button and everything should be fine again.
         </span>
         <br/>
-        <EventCustomButton>REFRESH</EventCustomButton>
+        <CustomButton>REFRESH</CustomButton>
       </section>
     </SideBannerLayout>
   );

@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import styles from "../../styles/login.module.css";
+import CustomFloatingInput from "./CustomFloatingInput";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
     e.preventDefault();
     //async function, set error
+    console.log("form submitted!")
   };
 
   return (
@@ -19,23 +21,23 @@ const LoginForm = () => {
       ) : (
         <span>Enter your details below.</span>
       )}
+      <br />
       <form onSubmit={handleLogin}>
         <div>
-          <input
-            type="email"
-            id="email"
-            value={email}
+          <CustomFloatingInput
+            id={"email"}
+            label={"Email"}
+            type={"email"}
+            placeholder={"Email"}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
-            required
+            required={true}
           />
-          <input
-            type="password"
-            id="password"
-            value={password}
+          <CustomFloatingInput
+            id={"password"}
+            label={"Password"}
+            type={"password"}
+            placeholder={"Password"}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-            required
           />
         </div>
         <span>

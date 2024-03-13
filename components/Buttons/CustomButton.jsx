@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../../styles/events.module.css";
 
 // You can extend this component to accept more props as needed
-const EventCustomButton = ({
+const CustomButton = ({
   children,
   onClick,
   style,
@@ -22,4 +22,4 @@ const EventCustomButton = ({
   );
 };
 
-export default EventCustomButton;
+export default CustomButton;
