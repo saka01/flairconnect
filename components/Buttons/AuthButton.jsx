@@ -25,7 +25,7 @@ const AuthButton = ({
       className={buttonClasses} // Default class merged with custom classes passed as prop
       {...props} // Spread any additional props
     >
-      {loading ? "Loading..." : children}
+      {loading ? "Loading" : children}
     </button>
   );
 };
