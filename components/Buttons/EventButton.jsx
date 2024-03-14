@@ -29,7 +29,7 @@ const EventButton = ({
   const buttonClasses = `
     ${styles.custombutton}
     ${buttonStyle}
-    ${styles.large}
+    ${styles.eventbuttonsize}
     ${loading ? styles.loading : ""}
   `;
   return (

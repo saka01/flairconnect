@@ -36,14 +36,6 @@ const EventsCard = ({ event, viewMode }) => {
     }
   };
 
-  // Determine the button text and color based on the user's relationship to the event
-  // let buttonText = event.isOwner ? "Edit" : event.isAttendee ? "Leave" : "Join";
-  // let buttonColor = event.isOwner
-  //   ? "edit"
-  //   : event.isAttendee
-  //   ? "leave"
-  //   : "join";
-
   return (
     <>
       {viewMode === "list" ? (

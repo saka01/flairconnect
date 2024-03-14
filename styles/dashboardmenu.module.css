@@ -5,6 +5,17 @@
 
 }
 
+.addevent{
+    position: fixed; /* Make it fixed relative to the viewport */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    width: 4em;
+    height: 4em;
+    cursor: pointer; /* Optional: Change cursor on hover */
+    z-index: 1000; /* Ensure it sits above other content */
+
+}
+
 .dashboardmain{
     padding: 5em;
 }
