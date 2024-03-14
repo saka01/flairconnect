@@ -22,6 +22,7 @@ const AuthButton = ({
   return (
     <button
       onClick={onClick}
+      style={{marginTop: "3em"}}
       className={buttonClasses} // Default class merged with custom classes passed as prop
       {...props} // Spread any additional props
     >

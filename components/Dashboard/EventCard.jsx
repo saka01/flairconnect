@@ -2,9 +2,48 @@
 import React from "react";
 import styles from "../../styles/events.module.css";
 import { FaUserLarge } from "react-icons/fa6";
-import CustomButton from "../Buttons/CustomButton";
+import Button from "../Buttons/EventButton";
+import { useRouter } from "next/router";
+
 
 const EventsCard = ({ event, viewMode }) => {
+  const router = useRouter();
+
+  const handleActionClick = async () => {
+    if (event.isOwner) {
+      // Navigate to the edit page if the user is the event owner
+      router.push(`/events/edit/${event.id}`);
+    } else if (event.isAttendee) {
+      // Attempt to leave the event if the user is an attendee
+      try {
+        await leaveEvent(event.id, user.id, jwtToken);
+        // Handle success (e.g., update UI or state to reflect the change)
+        alert("You have successfully left the event.");
+      } catch (error) {
+        console.error("Failed to leave event:", error);
+        alert("Failed to leave event.");
+      }
+    } else {
+      // Attempt to join the event if the user is neither the owner nor an attendee
+      try {
+        await joinEvent(event.id, user.id, jwtToken);
+        // Handle success
+        alert("You have successfully joined the event.");
+      } catch (error) {
+        console.error("Failed to join event:", error);
+        alert("Failed to join event.");
+      }
+    }
+  };
+
+  // Determine the button text and color based on the user's relationship to the event
+  // let buttonText = event.isOwner ? "Edit" : event.isAttendee ? "Leave" : "Join";
+  // let buttonColor = event.isOwner
+  //   ? "edit"
+  //   : event.isAttendee
+  //   ? "leave"
+  //   : "join";
+
   return (
     <>
       {viewMode === "list" ? (
@@ -26,7 +65,11 @@ const EventsCard = ({ event, viewMode }) => {
               {event.attendees} of {event.maxCapacity}
             </p>
           </div>
-          <CustomButton>JOIN</CustomButton>
+          <Button
+            onClick={handleActionClick}
+            isOwner={false}
+            isAttendee={true}
+          />
         </div>
       ) : (
         // Render as box
@@ -48,7 +91,11 @@ const EventsCard = ({ event, viewMode }) => {
             <div className={styles.boxeventattendees}>
               <FaUserLarge /> {event.attendees} of {event.maxCapacity}
             </div>
-            <CustomButton>JOIN</CustomButton>
+            <Button
+              onClick={handleActionClick}
+              isOwner={false}
+              isAttendee={false}
+            />
           </div>
         </div>
       )}

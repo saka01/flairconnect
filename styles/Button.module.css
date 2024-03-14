@@ -1,13 +1,12 @@
-.custombutton{
+.custombutton {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 1px;
-  margin-top: 3em;
   border-radius: 3px;
 }
 
 .primary {
-  background-color: #77E3EF;
+  background-color: #77e3ef;
 }
 
 .secondary {
@@ -28,6 +27,15 @@
   padding: 1em 5em;
 }
 
+.edit {
+  background: #c9ced3;
+}
+
+.leave {
+  background: #111936;
+  color: white;
+}
+
 .disabled {
   background-color: #cccccc;
   color: #666666;
@@ -35,7 +43,7 @@
 }
 
 .loading {
-  background-color: #77E3EF;
+  background-color: #77e3ef;
   opacity: 0.5;
   cursor: wait;
 }

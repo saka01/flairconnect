@@ -6,17 +6,30 @@ import styles from "../../styles/Button.module.css";
 const EventButton = ({
   children,
   onClick,
-  color = "primary", // Default color
-  size = "medium", // Default size
-  disabled = false,
+  isOwner = false,
+  isAttendee = false,
   loading = false,
   ...props
 }) => {
+  // Determine button state
+  let buttonText = "Join";
+  let buttonStyle = styles.primary; // Default color for "Join" button
+
+  if (loading) {
+    buttonText = "Loading";
+    buttonStyle = styles.loading;
+  } else if (isOwner) {
+    buttonText = "Edit";
+    buttonStyle = styles.edit; // Assuming you have an 'edit' style in your CSS
+  } else if (isAttendee) {
+    buttonText = "Leave";
+    buttonStyle = styles.leave; // Assuming you have a 'leave' style in your CSS
+  }
+
   const buttonClasses = `
     ${styles.custombutton}
-    ${styles[color]}
-    ${styles[size]}
-    ${disabled ? styles.disabled : ""}
+    ${buttonStyle}
+    ${styles.large}
     ${loading ? styles.loading : ""}
   `;
   return (
@@ -25,7 +38,7 @@ const EventButton = ({
       className={buttonClasses} // Default class merged with custom classes passed as prop
       {...props} // Spread any additional props
     >
-      {loading ? "Loading" : children}
+      {buttonText}
     </button>
   );
 };
