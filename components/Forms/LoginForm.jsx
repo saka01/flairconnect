@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import styles from "../../styles/login.module.css";
 import CustomFloatingInput from "./CustomFloatingInput";
-import AuthButton from "../Buttons/AuthButton";
+import Button from "../Buttons/AuthButton";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     const loginData = {
       identifier: username,
       password,
@@ -40,19 +41,20 @@ const LoginForm = () => {
 
       const data = await response.json();
       console.log("Login successful:", data);
+      setLoading(false);
     } catch (error) {
       console.error("Login error:", error.message);
+      setLoading(false);
       setError(error.message);
     }
 
-    //async function, set error
   };
 
   return (
     <div className={styles.loginform}>
       <h2>Sign In to HutsyConnect.</h2>
-      {error ? (
-        <p className={styles.error}>Error: {error}</p>
+      {error && username && password ? (
+        <p className={styles.validationerror}>Error: {error}</p>
       ) : (
         <span>Enter your details below.</span>
       )}
@@ -78,7 +80,7 @@ const LoginForm = () => {
         <span className={styles.signupalt}>
           Don&apos;t have account? <strong>Sign Up</strong>
         </span>
-        <AuthButton type="submit">SIGN IN</AuthButton>
+        <Button type="submit" size="large" loading={loading}>SIGN IN</Button>
       </form>
     </div>
   );

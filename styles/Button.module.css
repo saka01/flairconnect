@@ -1,0 +1,42 @@
+.custombutton{
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  margin-top: 3em;
+  border-radius: 3px;
+}
+
+.primary {
+  background-color: #77E3EF;
+}
+
+.secondary {
+  background-color: #111936;
+  color: white;
+}
+
+.medium {
+  font-size: 16px;
+}
+
+.small {
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.large {
+  padding: 1em 5em;
+}
+
+.disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.loading {
+  background-color: #007bff;
+  color: white;
+  opacity: 0.7;
+  cursor: wait;
+}
