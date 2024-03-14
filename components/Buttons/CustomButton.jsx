@@ -6,15 +6,17 @@ import styles from "../../styles/events.module.css";
 const CustomButton = ({
   children,
   onClick,
-  style,
-  className = "",
+  color = "primary", // Default color
+  size = "medium", // Default size
+  disabled = false,
+  loading = false,
   ...props
 }) => {
   return (
     <button
       onClick={onClick}
-      style={{borderRadius: "5px", ...style }} // Default styles merged with custom styles passed as prop
-      className={`${styles.custombutton} ${className}`} // Default class merged with custom classes passed as prop
+      style={{ borderRadius: "5px" }} // Default styles merged with custom styles passed as prop
+      className={`${styles.custombutton}`} // Default class merged with custom classes passed as prop
       {...props} // Spread any additional props
     >
       {children}

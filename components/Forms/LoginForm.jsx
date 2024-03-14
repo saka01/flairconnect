@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../styles/login.module.css";
 import CustomFloatingInput from "./CustomFloatingInput";
+import AuthButton from "../Buttons/AuthButton";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -9,7 +10,7 @@ const LoginForm = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    
+
     const loginData = {
       identifier: username,
       password,
@@ -21,30 +22,28 @@ const LoginForm = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "Accept": "*/*",
+            Accept: "*/*",
           },
           body: JSON.stringify(loginData),
         }
       );
 
-  //     if (!response.ok) {
-  //       const errorResponse = await response.json(); 
-  //       console.log("Login UNsuccessful:", errorResponse);
+      if (!response.ok) {
+        const errorResponse = await response.json();
 
-  // const errorMessage =
-  //   errorResponse.error && errorResponse.error.message
-  //     ? errorResponse.error.message
-  //     : "Login failed";
-  //       throw new Error(errorMessage);
-  //     }
+        const errorMessage =
+          errorResponse.error && errorResponse.error.message
+            ? errorResponse.error.message
+            : "Login failed";
+        throw new Error(errorMessage);
+      }
 
       const data = await response.json();
       console.log("Login successful:", data);
-      
     } catch (error) {
       console.error("Login error:", error.message);
       setError(error.message);
-    } 
+    }
 
     //async function, set error
   };
@@ -53,7 +52,7 @@ const LoginForm = () => {
     <div className={styles.loginform}>
       <h2>Sign In to HutsyConnect.</h2>
       {error ? (
-        <span>Error: {error}</span>
+        <p className={styles.error}>Error: {error}</p>
       ) : (
         <span>Enter your details below.</span>
       )}
@@ -76,11 +75,10 @@ const LoginForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <span>
+        <span className={styles.signupalt}>
           Don&apos;t have account? <strong>Sign Up</strong>
         </span>
-
-        <button type="submit">Login</button>
+        <AuthButton type="submit">SIGN IN</AuthButton>
       </form>
     </div>
   );

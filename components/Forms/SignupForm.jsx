@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import CustomFloatingInput from "./CustomFloatingInput";
 
 const SignupForm = () => {
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
   const handleLogin = () => {
     e.preventDefault();
-    //async function, set error
+    //async function, set error, check passwords
   };
 
   return (
@@ -22,23 +26,45 @@ const SignupForm = () => {
         <span>Enter your details below.</span>
       )}
       <form onSubmit={handleLogin}>
-
         <div>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
-            required
+          <CustomFloatingInput
+            id={"firstname"}
+            label={"First name"}
+            type={"text"}
+            placeholder={"First Name"}
+            onChange={(e) => setFirstName(e.target.value)}
+            required={true}
           />
-          <input
-            type="password"
-            id="password"
-            value={password}
+          <CustomFloatingInput
+            id={"lastname"}
+            label={"Last name"}
+            type={"text"}
+            placeholder={"Last name"}
+            onChange={(e) => setLastName(e.target.value)}
+            required={true}
+          />
+          <CustomFloatingInput
+            id={"email"}
+            label={"Email"}
+            type={"email"}
+            placeholder={"Email"}
+            onChange={(e) => setEmail(e.target.value)}
+            required={true}
+          />
+          <CustomFloatingInput
+            id={"password"}
+            label={"Password"}
+            type={"password"}
+            placeholder={"Password"}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-            required
+          />
+          <CustomFloatingInput
+            id={"confirm-password"}
+            label={"Confirm Password"}
+            type={"password"}
+            placeholder={"Confirm Password"}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required={true}
           />
         </div>
         <span>

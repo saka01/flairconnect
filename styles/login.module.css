@@ -5,21 +5,43 @@
   height: 100vh;
 }
 
-.loginform h2{
+.loginform h2 {
   font-size: 28px;
   font-weight: 400;
   line-height: 48px;
   color: #111936;
 }
 
-.loginform span{
+/* .loginform span{
 font-size: 18px;
 font-weight: 400;
 line-height: 24px;
 color: #949EA8;
+} */
 
+.error span {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #2d0def;
+}
 
+.signupalt {
+  display: none;
+}
+
+.custombutton{
+  background: #77E3EF;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  width: 100px;
+  height: 32px;
+  transition: background-color 0.3s;
 }
 
 @media screen and (max-width: 500px) {
+  .signupalt {
+    display: block;
+  }
 }
