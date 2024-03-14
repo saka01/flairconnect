@@ -114,16 +114,6 @@ const mockEvents = [
     maxCapacity: 30,
   },
 ];
-// {
-//     id: 1,
-//     title: "Tech Innovations Conference",
-//     host: "InnovateX",
-//     description: "A conference exploring the latest in technology and innovation.",
-//     attendees: 150,
-//     date: "2023-04-15",
-//     time: "10:00 AM",
-//     maxCapacity: 200
-//   },
 
 const Events = () => {
   const [activeTab, setActiveTab] = useState("allEvents");
