@@ -88,6 +88,7 @@ const LoginForm = () => {
           />
         </div>
         <span className={styles.signupalt}>
+          <br/>
           Don&apos;t have account? <strong>Sign Up</strong>
         </span>
         <Button type="submit" size="large" loading={loading}>

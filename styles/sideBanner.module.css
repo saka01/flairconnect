@@ -51,4 +51,8 @@ gap: 0.25em;
   .sidebanner {
     display: none;
   }
+
+  .topbanner {
+    display: none;
+  }
 }

@@ -7,7 +7,7 @@ import NameInitialIcon from "../Dashboard/NameInitialIcon";
 const DashboardPrimaryNav = () => {
   return (
     <div className={styles.dashboardprimarynav}>
-      <Logo />
+      <Logo show />
       <div className={styles.profilesettings}>
         <span>Tom Watts</span>
         <NameInitialIcon />

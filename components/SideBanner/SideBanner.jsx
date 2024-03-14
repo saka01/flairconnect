@@ -5,8 +5,9 @@ import styles from "../../styles/sideBanner.module.css";
 
 const SideBanner = () => {
   return (
+    <div>
+      <Logo show />
       <div className={styles.sidebanner}>
-        <Logo color="white" />
         <div className={styles.lowerbanner}>
           <span>GIVE YOURSELF SOME CREDIT</span>
           <Image
@@ -16,6 +17,7 @@ const SideBanner = () => {
             height={40}
           />
         </div>
+      </div>
     </div>
   );
 };
