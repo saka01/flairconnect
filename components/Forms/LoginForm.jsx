@@ -3,14 +3,50 @@ import styles from "../../styles/login.module.css";
 import CustomFloatingInput from "./CustomFloatingInput";
 
 const LoginForm = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
+    
+    const loginData = {
+      identifier: username,
+      password,
+    };
+    try {
+      const response = await fetch(
+        "http://jobtest.apihutsy.com/api/auth/local",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "*/*",
+          },
+          body: JSON.stringify(loginData),
+        }
+      );
+
+  //     if (!response.ok) {
+  //       const errorResponse = await response.json(); 
+  //       console.log("Login UNsuccessful:", errorResponse);
+
+  // const errorMessage =
+  //   errorResponse.error && errorResponse.error.message
+  //     ? errorResponse.error.message
+  //     : "Login failed";
+  //       throw new Error(errorMessage);
+  //     }
+
+      const data = await response.json();
+      console.log("Login successful:", data);
+      
+    } catch (error) {
+      console.error("Login error:", error.message);
+      setError(error.message);
+    } 
+
     //async function, set error
-    console.log("form submitted!")
   };
 
   return (
@@ -25,11 +61,11 @@ const LoginForm = () => {
       <form onSubmit={handleLogin}>
         <div>
           <CustomFloatingInput
-            id={"email"}
-            label={"Email"}
-            type={"email"}
-            placeholder={"Email"}
-            onChange={(e) => setEmail(e.target.value)}
+            id={"username"}
+            label={"Username"}
+            type={"text"}
+            placeholder={"Username"}
+            onChange={(e) => setUsername(e.target.value)}
             required={true}
           />
           <CustomFloatingInput
