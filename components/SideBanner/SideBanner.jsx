@@ -5,18 +5,21 @@ import styles from "../../styles/sideBanner.module.css";
 
 const SideBanner = () => {
   return (
-    <div>
-      <Logo show />
-      <div className={styles.sidebanner}>
-        <div className={styles.lowerbanner}>
-          <span>GIVE YOURSELF SOME CREDIT</span>
-          <Image
-            src="/images/hutsylogo.png"
-            alt="Hutsy Side banner"
-            width={40}
-            height={40}
-          />
-        </div>
+    <div className={styles.sidebanner}>
+      <div className={styles.logostuff}>
+        <Logo color="white" />
+      </div>
+
+      <div className={styles.lowerbanner}>
+        <span>GIVE YOURSELF</span>
+        <span>SOME CREDIT</span>
+        <br/>
+        <Image
+          src="/images/hutsylogo.png"
+          alt="Hutsy Side banner"
+          width={70}
+          height={70}
+        />
       </div>
     </div>
   );

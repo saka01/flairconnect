@@ -55,4 +55,9 @@
   .signupalt {
     display: block;
   }
+
+  .loginform{
+    width: 100%;
+    margin-right: 4em;
+  }
 }

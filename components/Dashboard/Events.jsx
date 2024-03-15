@@ -19,7 +19,7 @@ const mockEvents = [
     id: 2,
     title: "Local Art Expo",
     host: "Artists Unite",
-    description: "Showcasing the best local artists and their work.",
+    description: "Showcasing the best local artists and their work in their city.",
     attendees: 75,
     date: "2023-05-20",
     time: "02:00 PM",

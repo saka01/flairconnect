@@ -5,7 +5,7 @@
   left: 0;
   width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
-  background-color: #F9F9FB; /* Change this to match your modal's background */
+  background-color: #F9F9FB; 
   display: flex;
   justify-content: center;
   align-items: center;

@@ -6,6 +6,8 @@ font-weight: 400;
 line-height: 48px;
 color: #111936;
 text-align: left;
+margin-top: 10em;
+width: 80%;
 }
 
 .errorpage span{
@@ -21,6 +23,6 @@ color: #949EA8;
 width: 646px;
 height: 633px;
 top: 296px;
-left: 241px;
+left: 91px;
 
 }

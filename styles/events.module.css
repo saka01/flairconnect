@@ -173,12 +173,12 @@ margin-right: 9em;
 }
 
 .custombutton{
-  background: #77E3EF;
+  background: #111936;
+  color: white;
+  padding: 1.5em 5em;
+  width: fit-content;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 1px;
-  width: 100px;
-  height: 32px;
   transition: background-color 0.3s;
-  margin-left: auto;
 }

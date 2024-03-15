@@ -1,6 +1,7 @@
 import React from "react";
 import SideBanner from "./SideBanner";
 import styles from "../../styles/sideBanner.module.css";
+import Logo from "../Logo";
 
 
 const SideBannerLayout = ({ children }) => {

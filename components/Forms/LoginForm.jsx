@@ -24,7 +24,7 @@ const LoginForm = () => {
     };
     try {
       const response = await fetch(
-        "api/login",
+        "http://jobtest.apihutsy.com/api/auth/local",
         {
           method: "POST",
           headers: {

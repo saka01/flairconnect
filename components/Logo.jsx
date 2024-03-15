@@ -1,9 +1,18 @@
 import React from "react";
+// import styles from "../../styles/sideBanner.module.css";
 
-const Logo = ({color="black", show}) => {
+
+
+const Logo = ({ color = "black" }) => {
   return (
     //add classname to adjust for mobile view
-    <h1 style={{fontSize:"35px", color: `${color}`, display:`${show ? "contents" : "none"}`}}>
+
+    <h1
+      style={{
+        fontSize: "35px",
+      }}
+      // className={styles.logostuff}
+    >
       <strong>E.</strong>
     </h1>
   );
