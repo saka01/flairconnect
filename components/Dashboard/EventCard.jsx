@@ -44,8 +44,8 @@ const EventsCard = ({ event, viewMode }) => {
           <div className={styles.listeventinformation}>
             <p className={styles.listeventtitle}>{event.title}</p>
             <p className={styles.listeventdescription}>
-              {event.description.length > 30
-                ? `${event.description.substring(0, 20)}...`
+              {event.description.length > 35
+                ? `${event.description.substring(0, 32)}...`
                 : event.description}
             </p>
 

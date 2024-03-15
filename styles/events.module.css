@@ -110,24 +110,24 @@
 .listeventdetails {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   background: white;
-  padding: 1em;
+  padding: 0.6em;
   margin-bottom: 1em;
   border-radius: 8px;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1087);
+text-wrap: nowrap;
+
 }
 
 .listeventinformation{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-}
-
-.listeventdetails p{
-  margin-right: 1em;
+  width: 100%;
+  gap: 20px;
 }
 
 .listeventtitle{
@@ -135,7 +135,7 @@ font-size: 18px;
 font-weight: 400;
 line-height: 48px;
 color: #111936;
-width: 15em;
+width: 18em;
 }
 
 .listeventdescription{
@@ -143,7 +143,8 @@ font-size: 16px;
 font-weight: 400;
 line-height: 24px;
 color: #949EA8;
-
+width: 15em;
+text-wrap: nowrap;
 }
 
 .listeventhost{
@@ -151,7 +152,7 @@ font-size: 14px;
 font-weight: 400;
 line-height: 24px;
 color: #7D7878;
-
+width: 8em;
 }
 
 .listeventschedule{
@@ -159,15 +160,16 @@ font-size: 14px;
 font-weight: 400;
 line-height: 24px;
 color: #CACDD0;
+width: 10em;
 
 }
 
 .listeventattendees{
-
 font-size: 14px;
 font-weight: 400;
 line-height: 24px;
 color: #949EA8;
+margin-right: 9em;
 }
 
 .custombutton{
@@ -178,4 +180,5 @@ color: #949EA8;
   width: 100px;
   height: 32px;
   transition: background-color 0.3s;
+  margin-left: auto;
 }
