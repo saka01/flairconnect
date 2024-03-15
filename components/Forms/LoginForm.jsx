@@ -3,6 +3,8 @@ import styles from "../../styles/form.module.css";
 import CustomFloatingInput from "./CustomFloatingInput";
 import Button from "../Buttons/AuthButton";
 import { useRouter } from "next/router";
+import Cookies from "js-cookie";
+
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -45,6 +47,16 @@ const LoginForm = () => {
 
       const data = await response.json();
       console.log("Login successful:", data);
+
+
+      // Store the JWT token
+      Cookies.set("token", data.jwt, {
+        expires: 7,
+        secure: true,
+        sameSite: "Lax",
+      });
+
+
       setLoading(false);
       router.push("/dashboard"); // Redirect to dashboard page after successful login
     } catch (error) {

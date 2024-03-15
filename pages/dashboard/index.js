@@ -7,10 +7,10 @@ import FullPageModal from "../../components/FullPageModal";
 import NewEventForm from "../../components/Forms/NewEventForm";
 
 export default function Dashboard() {
-   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-   const openModal = () => setIsModalOpen(true);
-   const closeModal = () => setIsModalOpen(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <DashboardLayout>
@@ -27,7 +27,7 @@ export default function Dashboard() {
           onClick={openModal}
         />
         <FullPageModal isOpen={isModalOpen} onClose={closeModal}>
-          <NewEventForm/>
+          <NewEventForm />
         </FullPageModal>
       </div>
     </DashboardLayout>
