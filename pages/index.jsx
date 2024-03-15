@@ -17,11 +17,15 @@ export default function Home() {
   return (
     <main>
       <h1>Welcome to HutsyConnect!</h1>
-      <AuthButton onClick={handleLogin} size="Large">
+      <AuthButton style={{ padding: "4em" }} onClick={handleLogin} size="Large">
         LOGIN
       </AuthButton>
       <br />
-      <AuthButton onClick={handleRegister} size="Large">
+      <AuthButton
+        style={{ padding: "4em" }}
+        onClick={handleRegister}
+        size="Large"
+      >
         REGISTER
       </AuthButton>
     </main>

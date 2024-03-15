@@ -6,6 +6,7 @@ import styles from "../../styles/Button.module.css";
 const AuthButton = ({
   children,
   onClick,
+  style,
   color = "primary", // Default color
   size = "medium", // Default size
   disabled = false,
@@ -19,10 +20,11 @@ const AuthButton = ({
     ${disabled ? styles.disabled : ""}
     ${loading ? styles.loading : ""}
   `;
+  const mergedStyles = { marginTop: "3em", ...style };
   return (
     <button
       onClick={onClick}
-      style={{marginTop: "3em"}}
+      style={mergedStyles}
       className={buttonClasses} // Default class merged with custom classes passed as prop
       {...props} // Spread any additional props
     >
