@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../styles/login.module.css";
+import styles from "../../styles/form.module.css";
 import CustomFloatingInput from "./CustomFloatingInput";
 import Button from "../Buttons/AuthButton";
 import { useRouter } from "next/router";

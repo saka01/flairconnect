@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CustomFloatingInput from "./CustomFloatingInput";
 import AuthButton from "../Buttons/AuthButton";
-import styles from "../../styles/login.module.css";
+import styles from "../../styles/form.module.css";
 
 const NewEventForm = () => {
   const [title, setTitle] = useState("");
@@ -17,7 +17,7 @@ const NewEventForm = () => {
   };
 
   return (
-    <div>
+    <div className={styles.neweventform} >
       <h2>Create new event</h2>
       {error ? <span>Error: {error}</span> : <span>Enter details below.</span>}
       <form onSubmit={handleLogin}>
@@ -32,7 +32,7 @@ const NewEventForm = () => {
           />
           <CustomFloatingInput
             id={"description"}
-            label={"Descriptioon"}
+            label={"Description"}
             type={"text"}
             placeholder={"Description"}
             onChange={(e) => setDescriptiion(e.target.value)}

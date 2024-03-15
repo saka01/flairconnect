@@ -5,7 +5,7 @@
   left: 0;
   width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
-  background-color: #FFF; /* Change this to match your modal's background */
+  background-color: #F9F9FB; /* Change this to match your modal's background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,15 +19,20 @@
   justify-content: center;
   align-items: center;
   text-align: center; /* Center text if any */
-  overflow-x:hidden;
 }
 
 .closeButton {
-  position: fixed; /* Fixed or absolute, depending on how you want to position it */
+  display: flex; /* Aligns items in a row */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  position: absolute;
   top: 10px;
-  right: 10px;
+  right: 30px;
   border: none;
   background: none;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 16px;
+font-weight: 400;
+line-height: 48px;
+color: #323C46;
 }
