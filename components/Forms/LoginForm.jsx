@@ -35,15 +35,15 @@ const LoginForm = () => {
         }
       );
 
-      if (!response.ok) {
-        const errorResponse = await response.json();
+      // if (!response.ok) {
+      //   const errorResponse = await response.json();
 
-        const errorMessage =
-          errorResponse.error && errorResponse.error.message
-            ? errorResponse.error.message
-            : "Login failed";
-        throw new Error(errorMessage);
-      }
+      //   const errorMessage =
+      //     errorResponse.error && errorResponse.error.message
+      //       ? errorResponse.error.message
+      //       : "Login failed";
+      //   throw new Error(errorMessage);
+      // }
 
       const data = await response.json();
       console.log("Login successful:", data);
