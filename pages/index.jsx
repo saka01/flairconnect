@@ -2,7 +2,7 @@ import AuthButton from "../components/Buttons/AuthButton";
 import { useRouter } from "next/router";
 import Cookies from "js-cookie";
 
-export default function Home({ isAuthenticated }) {
+export default function Home() {
   const router = useRouter();
 
   const handleLogin = (e) => {
@@ -22,7 +22,7 @@ export default function Home({ isAuthenticated }) {
   }
   return (
     <main>
-      <h1>Welcome to HutsyConnect!</h1>
+      <h1>Event listing</h1>
       <AuthButton
         style={{ padding: "2em", marginLeft: "2em" }}
         onClick={handleLogin}
@@ -38,7 +38,7 @@ export default function Home({ isAuthenticated }) {
         REGISTER
       </AuthButton>
       <br />
-      {isAuthenticated && (
+       
         <AuthButton
           style={{ padding: "1em", marginLeft: "2em" }}
           color="secondary"
@@ -47,17 +47,6 @@ export default function Home({ isAuthenticated }) {
         >
           LOGOUT
         </AuthButton>
-      )}
     </main>
   );
-}
-export async function getServerSideProps({ req }) {
-  const token = req.cookies.token; 
-  let isAuthenticated = false;
-
-  isAuthenticated = !!token; 
-
-  return {
-    props: { isAuthenticated },
-  };
 }

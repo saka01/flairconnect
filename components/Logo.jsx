@@ -13,7 +13,7 @@ const Logo = ({ color = "black" }) => {
       }}
       // className={styles.logostuff}
     >
-      <strong>E.</strong>
+      <strong>FLAIR.</strong>
     </h1>
   );
 };

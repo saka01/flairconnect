@@ -1,7 +1,7 @@
-HutsyConnect
+FliarConnect
 ============
 
-HutsyConnect is a web application designed to allow registered users to sign up for and create events. This platform is built using Next.js and is designed to offer a sleek, user-friendly interface for managing and participating in events.
+FliarConnect is a web application designed to allow registered users to sign up for and create events. This platform is built using Next.js and is designed to offer a sleek, user-friendly interface for managing and participating in events.
 
 Getting Started
 ---------------
@@ -13,7 +13,7 @@ First, clone the repository to your local machine:
 Navigate into the project directory:
 
 
-`cd HutsyConnect`
+`cd FliarConnect`
 
 Before running the development server, install the necessary dependencies:
 
@@ -61,13 +61,13 @@ Deployment
 The application is deployed on Vercel. Follow the steps below to deploy your own instance:
 
 1.  Sign up/log in to Vercel ([https://vercel.com](https://vercel.com/)).
-2.  Connect your GitHub account and select the HutsyConnect repository.
+2.  Connect your GitHub account and select the FliarConnect repository.
 3.  Configure the project settings if necessary and deploy.
 
 Contributing
 ------------
 
-To contribute to HutsyConnect, follow these steps:
+To contribute to FliarConnect, follow these steps:
 
 1.  Fork this repository.
 2.  Create a new branch (`git checkout -b feature/YourFeatureName`).

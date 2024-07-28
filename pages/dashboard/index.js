@@ -15,7 +15,7 @@ export default function Dashboard() {
   return (
     <DashboardLayout>
       <Events />
-
+{/* 
       <div className={styles.addevent}>
         <MdOutlineAddCircle
           style={{
@@ -29,7 +29,7 @@ export default function Dashboard() {
         <FullPageModal isOpen={isModalOpen} onClose={closeModal}>
           <NewEventForm />
         </FullPageModal>
-      </div>
+      </div> */}
     </DashboardLayout>
   );
 }

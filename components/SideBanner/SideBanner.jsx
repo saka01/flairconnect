@@ -11,15 +11,8 @@ const SideBanner = () => {
       </div>
 
       <div className={styles.lowerbanner}>
-        <span>GIVE YOURSELF</span>
-        <span>SOME CREDIT</span>
+        <span>Events.</span>
         <br/>
-        <Image
-          src="/images/hutsylogo.png"
-          alt="Hutsy Side banner"
-          width={70}
-          height={70}
-        />
       </div>
     </div>
   );

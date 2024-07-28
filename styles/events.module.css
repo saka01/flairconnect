@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   padding-top: 5em;
-  padding-left: 10em;
-  padding-right: 10em;
 }
 
 .eventnav {
@@ -59,31 +57,31 @@
   flex-direction: column;
   justify-content: space-between;
   background: white;
-  padding: 2em;
-  width: 25.5em;
+  padding: 1.5em;
+  max-width: 19em;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1087);
 }
 
 .boxeventschedule{
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.8rem;
+  line-height: 1em;
   color: rgba(202, 205, 208, 1);
 }
 .boxeventdescription{
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 0.8rem;
+  line-height: 1em;
   color: rgba(148, 158, 168, 1);
 }
 .boxeventtitle{
   font-weight: 400;
-  font-size: 22px;
+ font-size: 1rem;
   color: #111936;
 }
 .boxeventhost{
  font-weight: 400;
-  font-size: 14px;
+  font-size: 1rem;
   color: #7D7878;
 }
 .boxeventheader{
@@ -100,6 +98,8 @@
   align-items: center;
   color:#A9AEB4;
   gap: 0.5em;
+  font-size: 0.8rem;
+  line-height: 1em;
 }
 
 .listview {
@@ -115,7 +115,7 @@
   background: white;
   padding: 0.6em;
   margin-bottom: 1em;
-  border-radius: 8px;
+  border-radius: 0.5em;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1087);
 text-wrap: nowrap;
 
@@ -126,7 +126,7 @@ text-wrap: nowrap;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 87%;
   gap: 20px;
 }
 
@@ -169,7 +169,7 @@ font-size: 14px;
 font-weight: 400;
 line-height: 24px;
 color: #949EA8;
-margin-right: 9em;
+margin-right: 5%;
 }
 
 .custombutton{

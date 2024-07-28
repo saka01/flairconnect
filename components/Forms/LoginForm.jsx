@@ -29,7 +29,7 @@ const LoginForm = () => {
 
   return (
     <div className={styles.loginform}>
-      <h2>Sign In to HutsyConnect.</h2>
+      <h2>Sign In to Fliar.</h2>
       {error ? (
         <p className={styles.validationerror}>Error: {error}</p>
       ) : (
