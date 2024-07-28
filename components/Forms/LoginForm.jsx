@@ -22,48 +22,9 @@ const LoginForm = () => {
       identifier: username,
       password,
     };
-    try {
-      const response = await fetch(
-        "http://jobtest.apihutsy.com/api/auth/local",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "*/*",
-          },
-          body: JSON.stringify(loginData),
-        }
-      );
-
-      // if (!response.ok) {
-      //   const errorResponse = await response.json();
-
-      //   const errorMessage =
-      //     errorResponse.error && errorResponse.error.message
-      //       ? errorResponse.error.message
-      //       : "Login failed";
-      //   throw new Error(errorMessage);
-      // }
-
-      const data = await response.json();
-      console.log("Login successful:", data);
-
-
-      // Store the JWT token
-      Cookies.set("token", data.jwt, {
-        expires: 7,
-        secure: true,
-        sameSite: "Lax",
-      });
-
-
       setLoading(false);
       router.push("/dashboard"); // Redirect to dashboard page after successful login
-    } catch (error) {
-      console.error("Login error:", error.message);
-      setLoading(false);
-      setError(error.message);
-    }
+
   };
 
   return (
